@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Oficina Control | Gestão de Veículos</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="brand">
+                    <span class="brand-icon">
+                        <img src="assets/img/chevrolet-logo.png" alt="Chevrolet">
+                    </span> 
+                    <div>SABEN<span>AUTO</span>
+                        <small>GESTÃO DE PEDIDOS</small>
+                    </div>
+                </div>
+                <nav id="nav">
+                    <button data-view="dashboard" class="active">◫ <span>Dashboard</span></button>
+                    <button data-view="vehicles">▤ <span>Veículos</span></button>
+                    <button data-view="reports">▥ <span>Relatórios</span></button>
+                    <button data-view="archived">▣ <span>Arquivados</span></button>
+                </nav>
+                <div class="sidefoot">ARMAZENAMENTO LOCAL<br>
+                    <small>Os dados ficam neste navegador.</small>
+                    <button id="backupBtn" class="outline small">Exportar backup</button>
+                    <label class="import-label">Importar backup<input type="file" id="restoreInput" accept="application/json" hidden>
+                </label></div>
+            </aside>
+            <main class="main"><header class="topbar">
+                <div><span class="eyebrow">PAINEL DE CONTROLE</span>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+                <div class="top-actions">
+                    <span id="today"></span>
+                    <button id="newVehicle" class="primary">+ Novo veículo</button>
+                </div>
+            </header>
+                <section id="app"></section>
+            </main>
+    </div>
+    <div id="modalRoot"></div>
+    <div id="toast" role="status"></div>
+    
+    <script src="js/database.js"></script><script src="js/app.js"></script></body></html>
